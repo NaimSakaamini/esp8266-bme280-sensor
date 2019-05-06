@@ -1,0 +1,22 @@
+menu "Sensor Configuration"
+	
+config ESPNOW_CHANEL
+    int "WiFi chanel"
+    range 1 13
+    default 1
+    help
+		ESP-NOW chanel
+
+config ESPNOW_STATION_MAC
+    string "Station MAC address"
+    default "ff:ff:ff:ff:ff:ff"
+    help
+		ESP-NOW MAC address of weather station device
+
+config SLEEP_TIME
+    int "Sleep time in second"
+    default 60
+    help
+		Sleep time
+
+endmenu
