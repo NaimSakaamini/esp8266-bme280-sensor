@@ -1,7 +1,8 @@
 #ifndef BME_H
 #define BME_H
 
-typedef struct {
+typedef struct
+{
 	uint32_t pressure;
 	int16_t temperature;
 	uint16_t humidity;

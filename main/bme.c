@@ -129,8 +129,8 @@ bme_data_t bme_read()
 	ret.pressure = data.pressure;
 	ret.temperature = data.temperature;
 
-	ESP_LOGI(LOG_TAG, "Pressure %d *0.01 Pa",  data.pressure);
-	ESP_LOGI(LOG_TAG, "Temperature %d *.01 °C",  data.temperature);
+	ESP_LOGI(LOG_TAG, "Pressure %d *0.01 Pa", data.pressure);
+	ESP_LOGI(LOG_TAG, "Temperature %d *.01 °C", data.temperature);
 	ESP_LOGI(LOG_TAG, "Humidity %d *0.01 %%", data.humidity);
 
 	return ret;
