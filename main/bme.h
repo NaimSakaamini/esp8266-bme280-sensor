@@ -1,15 +1,15 @@
-#ifndef BME_H
-#define BME_H
+#ifndef BME_H_
+#define BME_H_
 
 typedef struct
 {
-	uint32_t pressure;
-	int16_t temperature;
-	uint16_t humidity;
+    uint32_t pressure;   // 0.01 Pa
+    int16_t temperature; // 0.01 °C
+    uint16_t humidity;   // 0.01 %
 } bme_data_t;
 
 void bme_init();
 
 bme_data_t bme_read();
 
-#endif /* BME_H */
+#endif /* BME_H_ */

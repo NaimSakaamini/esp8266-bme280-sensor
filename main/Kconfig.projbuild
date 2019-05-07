@@ -1,22 +1,34 @@
 menu "Sensor Configuration"
 	
-config ESPNOW_CHANEL
-    int "WiFi chanel"
+config ESPNOW_CHANNEL
+    int "ESPNOW channel"
     range 1 13
     default 1
     help
-		ESP-NOW chanel
+		ESPNOW WiFi channel.
 
 config ESPNOW_STATION_MAC
-    string "Station MAC address"
+    string "ESPNOW Station MAC address"
     default "ff:ff:ff:ff:ff:ff"
     help
-		ESP-NOW MAC address of weather station device
+		ESPNOW MAC address of weather station device.
+
+config ESPNOW_PMK
+    string "ESPNOW primary master key"
+    default "pmk1234567890123"
+    help
+        The length of ESPNOW primary master must be 16 bytes.
+
+config ESPNOW_LMK
+    string "ESPNOW local master key"
+    default "lmk1234567890123"
+    help
+        The length of ESPNOW local master must be 16 bytes.
 
 config SLEEP_TIME
     int "Sleep time in second"
     default 60
     help
-		Sleep time
+		Sleep time.
 
 endmenu
