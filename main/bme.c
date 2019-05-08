@@ -5,6 +5,7 @@
 #include "esp_log.h"
 #include "driver/gpio.h"
 #include "driver/i2c.h"
+#include "rom/ets_sys.h"
 #include "bme280.h"
 
 #include "bme.h"
@@ -72,7 +73,7 @@ int8_t user_i2c_read(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16
 
 void user_delay_ms(uint32_t period)
 {
-    vTaskDelay(ceilf(period / (float) portTICK_PERIOD_MS));
+	ets_delay_us(period * 1000);
 }
 
 void init_i2c()
